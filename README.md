@@ -1,6 +1,11 @@
-# 19CS301Module-9
-### EX: 9.1                                            MATRIX OPERATIONS
-### Aim: To Write a Python Program to subtract two matrices by reading the matrix from the user.
+# 19CS301-Module-9
+Reg no: 212222040177
+Name: Venkatesan M
+
+### EX: 9.1 - MATRIX OPERATIONS
+
+### Aim: 
+To Write a Python Program to subtract two matrices by reading the matrix from the user.
 ### Algorithm:
 
 STEP 1: Start.
@@ -49,7 +54,8 @@ print(C)
 ### Result: Thus, the given program is implemented and executed successfully .
 
 ### EX: 9.2 LIST COMPREHENSION
-### Aim: To Write a Python class program to generate all even numbers between 200 and 300 and store in a list using list comprehension.
+### Aim: 
+To Write a Python class program to generate all even numbers between 200 and 300 and store in a list using list comprehension.
 ### Algorithm:
 STEP 1: Start.
 
@@ -89,7 +95,8 @@ obj.display()
 ### Result: Thus, the given program is implemented and executed successfully .
 
 ### EX: 9.3 ADVANCED LIST PROCESSING
-### Aim: To Write a Python program to Find the transpose of a matrix using list Comprehension.
+### Aim: 
+To Write a Python program to Find the transpose of a matrix using list Comprehension.
 
 ### Algorithm:
 
@@ -132,7 +139,8 @@ T = [[r[i]for r in matrix]for i in range(len(matrix[0]))]
 
 
 ### EX: 9.4       TOEPLITZ MATRIX
-### Aim: To Write a Python Program to check whether the given matrix is Toeplitz Matrix.
+### Aim: 
+To Write a Python Program to check whether the given matrix is Toeplitz Matrix.
 
 
 ### Algorithm:
@@ -187,5 +195,66 @@ if isThoeplitz(A):
 ![image](https://github.com/user-attachments/assets/0fb8f81b-ab07-4b3e-b273-035a0f38566d)
 
 ### Result: Thus, the given program is implemented and executed successfully.
+
+### SEB:
+
+
+### Aim: 
+To write a Python program to extract only the strong numbers from a list using the filter() function.
+
+### Algorithm:
+
+STEP 1: Begin the program.
+
+STEP 2: Import the math module to access the factorial function.
+
+STEP 3: Define a function is_strong_number(n) that:
+      Splits the number into its digits.
+      Computes the factorial of each digit.
+      Sums the factorials and checks if the sum equals the original number.
+
+STEP 4: Create a list of numbers.
+
+STEP 5 : Use the filter() function with is_strong_number to extract strong numbers from the list.
+
+STEP 6: Convert the filter object into a list and display the result.
+
+STEP 7 : Stop.
+### Program:
+```
+
+        
+        
+def factorial(n):
+    p=1
+    for i in range(1,n+1):
+        p=p*i
+    return p
+def IsStrong(x):
+    temp=x
+    sum=0
+    while (x>0):
+        r=x%10
+        sum = sum+factorial(r)
+        x=x//10
+    if sum==temp:
+        return True
+    else:
+        return False
+
+L=[]
+n=int(input())
+for i in range(n):
+    x=int(input())
+    L.append(x)
+StrongList=list(filter(IsStrong,L))
+print(StrongList)
+        
+        
+```
+### Output:
+![Screenshot 2025-05-02 195811](https://github.com/user-attachments/assets/74f564aa-c666-4a32-a757-8de6d328cb1b)
+
+### Result: Thus, the given program is implemented and executed successfully .
  
 
